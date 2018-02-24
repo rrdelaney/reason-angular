@@ -1,0 +1,11 @@
+{
+  "name": "reason-angular",
+  "version": "1.0.0",
+  "refmt": 3,
+  "sources": "src",
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "bsc-flags": ["-bs-gen-tds"]
+}
