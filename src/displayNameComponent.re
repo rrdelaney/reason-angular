@@ -1,27 +1,25 @@
 let displayName = () => ();
 
-let make = ReasonAngular.createComponent(displayName);
+let make = ReasonAngular.Component.make(displayName);
 
-ReasonAngular.decorators(
+ReasonAngular.Component.decorators(
   make,
   [|
     {
       "_type": ReasonAngular.Annotations.component,
       "args": [|
-        Js.Json.object_(
-          Js.Dict.fromArray([|
-            ("selector", Js.Json.string("greeting")),
-            ("template", Js.Json.string("{{displayName(name)}} Welcome!"))
-          |])
-        )
+        ReasonAngular.Decorator.component({
+          "selector": "greeting",
+          "template": "{{displayName(name)}} Welcome!"
+        })
       |]
     }
   |]
 );
 
-ReasonAngular.ctorParameters(make, () => [||]);
+ReasonAngular.Component.ctorParameters(make, () => [||]);
 
-ReasonAngular.propDecorators(
+ReasonAngular.Component.propDecorators(
   make,
   Js.Dict.fromArray([|
     ("name", [|{"_type": ReasonAngular.Annotations.input, "args": [||]}|])
@@ -43,9 +41,9 @@ let render = (ctx, cm) => {
   );
 };
 
-ReasonAngular.ngComponentDef(
+ReasonAngular.Component.ngComponentDef(
   make,
-  ReasonAngular.defineComponent({
+  ReasonAngular.Component.defineComponent({
     "_type": make,
     "tag": "display-name",
     "factory": () => Js.Json.object_(Js.Dict.empty()),

@@ -1,1 +1,0 @@
-let displayName = name => "Hello " ++ name ++ "!";
