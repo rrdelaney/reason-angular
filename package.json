@@ -4,8 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build":
-      "bsb -clean-world -make-world && cp lib/bs/src/*.d.ts src && sed -i \"s/var/const/g\" src/*.d.ts && sed -i \"s/o0/ɵ/g\" src/*.js && sed -i \"s/make: (param : any) => any/make: any/g\" src/*.d.ts && ngc && cp src/*.js lib/src && browserify lib/src/app.js -o public/index.js"
+    "build": "bsb -clean-world -make-world && cp lib/bs/src/*.d.ts src && sed -i \"s/o0/ɵ/g\" src/*.js && sed -i \"s/make: (param : any) => any/make: any/g\" src/*.d.ts && ngc && cp src/*.js lib/src && browserify lib/src/app.js -o public/index.js"
   },
   "dependencies": {
     "@angular/core": "^6.0.0-beta.5",

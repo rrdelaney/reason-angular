@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core'
 import { App } from './app'
+import { DisplayName } from './displayName'
 import { Greeting } from './greeting'
-import { make } from './displayNameModule'
 
 @NgModule({
-  declarations: [App, Greeting],
-  imports: [make]
+  declarations: [App, DisplayName, Greeting]
 })
 export class AppModule {}

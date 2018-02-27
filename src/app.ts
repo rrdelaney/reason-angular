@@ -9,7 +9,7 @@ import {
   template: `
     <h3>This is my app!</h3>
     <p>
-      <greeting [name]="name"></greeting>
+      <display-name [name]="name"></display-name>
     </p>
   `
 })
