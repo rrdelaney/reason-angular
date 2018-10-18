@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core'
 import { App } from './app'
 import { Greeting } from './greeting'
-import { make } from './displayNameModule'
+import { displayNameModule } from './displayNameModule'
 
+// @ts-ignore
 @NgModule({
   declarations: [App, Greeting],
-  imports: [make]
+  imports: [displayNameModule]
 })
 export class AppModule {}
