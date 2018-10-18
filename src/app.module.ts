@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { App } from './app'
+import { DisplayName } from './displayName'
 import { Greeting } from './greeting'
 import { displayNameModule } from './displayNameModule'
 

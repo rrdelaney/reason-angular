@@ -37,7 +37,7 @@ let render = (ctx, cm) => {
   };
   ReasonAngular.Instructions.textNodeValue(
     0,
-    ReasonAngular.Instructions.createBinding1("", ctx##name, " Welcome!")
+    ReasonAngular.Instructions.createBinding1("", ctx##name, " Welcome! :D")
   );
 };
 
